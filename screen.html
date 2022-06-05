@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding:0;
+      }
+
+      html, body {
+        height: 100%;
+      }
+      
+      #content {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        /* display: none; visibility: hidden */
+        justify-content: center;
+      }
+
+      .active {
+        width: auto;
+        height: 100%;
+        background: lightpink;
+        display: block;
+      }
+      
+      .inactive{
+        display: none;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+      }
+
+      #home {
+        background-image: url('https://images.unsplash.com/photo-1533676802871-eca1ae998cd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1933&q=80');
+        width: 100%;
+        height: calc(100vh - 62px);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center bottom; 
+      }
+
+      #services {
+        background-image: url('https://images.unsplash.com/photo-1596627116790-af6f46dddbda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+        width: 100%;
+        height: calc(100vh - 62px);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 10% 60%; 
+      }
+
+      button {
+        background-color: white;
+        color: lightseagreen;
+        border: 2px solid lightseagreen;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: rgb(89, 194, 189);
+        color: #000;
+      }
+
+      h1 {
+        position: absolute;
+        top: 12rem;
+        left: 4rem;        
+        color: #BF8049;
+      }
+
+      #services h1 {
+        font-family: 'Dancing Script', cursive;
+        color: #fff;
+        text-shadow: 2px 2px 2px #7DB7B3;
+        position:absolute;
+        left: 80rem;
+        top: 20rem;
+      }
+    </style>
+
+    <script>
+      function Home() {
+        // content.style.display = 'block';
+        home.classList.add('active');
+        home.classList.remove('inactive')
+        services.classList.add('inactive');
+        services.classList.remove('active')
+      }
+
+      function Services() {
+        services.classList.add('active');
+        services.classList.remove('inactive')
+        home.classList.add('inactive');
+        home.classList.remove('active')
+      }
+    </script>
+  </head>
+
+<body>
+  <nav>
+    <button onclick="Home()"> HOME </button>
+    <button onclick="Services()"> SERVICES </button>
+  </nav>
+  <div id="content">
+    <div id='home'class='active'> 
+      <h1>Home is wherever you're in peace</h1>
+    </div>
+    <div id='services' class='inactive'>
+      <h1>Dreaming is a service to heart</h1>
+    </div>
+  </div>
+</body>
+</html>
+
