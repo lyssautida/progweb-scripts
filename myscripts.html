@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <style>
+      #home{
+        width: 200px;
+        height: 200px;
+        background: lightseagreen;
+        display: block;
+      }
+
+      #services{
+        width: 200px;
+        height: 200px;
+        background: lightskyblue;
+        display: block;
+      }
+
+    </style>
+    <script>
+      function inicio (){
+        home.classList.add('active');
+      } 
+      function serviços(){
+        if(conteudo.style.display === "block"){
+        conteudo.style.display = "none";
+        }else{
+        conteudo.style.display = "block";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="inicio()">Inicio</button>
+    <button onclick="serviços()">Serviços</button>
+    <div id="conteudo"></div>
+    <div id="home"></div>
+    <div id="services"></div>
+  </body>
+</html>
