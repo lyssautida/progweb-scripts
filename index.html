@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="nav">
+    <div id="screen" class="button">
+      <a href="screen.html">Screen</a>
+    </div>
+    <div id="test" class="button">
+      <a href="test.html">Teste</a>
+    </div>
+    <div id="myScripts" class="button">
+      <a href="myscripts.html">My Scripts</a>
+    </div>
+
+  </div>
+    <div class="panel">
+  </div>
+
+  <script>
+    let element = document.getElementsByClassName("panel")
+    let x = 5;
+    do {
+      element.innerHTML += "Text: " + x + "<br />";
+      x--;
+    } while (x > 0);
+  </script>
+
+  <script>
+    let option = "card";
+    switch (option) {
+      case "card":
+        alert("You selected payment method: " + option);
+        break;
+    }
+  </script>
+
+  <script>
+    var greaterLesserThan = function Greater(a, b){
+      if(a<b) {
+        return 'lesser than'
+      } else {
+        return 'greater than'
+      }
+    }
+    greaterLesserThan(10,30);
+  </script>
+</body>
+</html>
