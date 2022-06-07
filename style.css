@@ -47,3 +47,43 @@ body {
 a {
   text-decoration: none;
 }
+
+.panel {
+  width: 4rem;
+  height: 2rem;
+  font-size: 10px;
+  margin: auto;
+  margin-top: 10rem;
+  vertical-align: middle;
+  border: solid 2px lightseagreen;
+  text-align: center;
+  justify-content: center;
+  align-self: center;
+  justify-content: center;
+  position: relative;
+
+  animation-name: move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  /* animation-timing-function: linear; */
+  animation-duration: 5s;
+  /* animation: move 5s; */
+  -webkit-animation: move 5s infinite alternate;
+  -moz-animation: move 5s infinite alternate;
+}
+
+@keyframes move {
+  from {
+    background-color: lightpink; 
+    /* left: 0px; */
+    width: 200px;
+    height: 100px;
+  }
+  to {
+    background-color:lightskyblue;
+    /* left: 200px; */
+    width: 300px;
+    height: 200px;
+  }
+}
+
