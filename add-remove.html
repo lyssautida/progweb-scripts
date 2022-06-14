@@ -1,0 +1,126 @@
+
+<html>
+  <head>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-image: url('https://images.unsplash.com/photo-1655146162264-44a16e7068b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2126&q=80');
+        background-repeat: no-repeat;
+        display: flex;
+      }
+
+      .input {
+        margin: auto;
+        margin-top: 2rem;
+        justify-content: center;
+        align-self: center;
+        align-items: center;
+        align-content: center;
+      }
+      
+      #campo {
+        padding: 0.4rem;
+        border-radius: 4px;
+        color: darkgreen;
+        font-weight: 500;
+        padding-left: 1rem;
+      }
+
+      #campo:focus {
+        border: 4px solid #6AAA50;
+        border-radius: 4px;
+        outline: 0;
+        height: 120%;
+        font-weight: 500;
+      }
+
+      #campo::placeholder {
+        color: rgb(81, 121, 81);
+      }
+
+
+      ul {
+        align-items: right;
+        align-content: right;
+        color: #fff;
+      }
+
+      ul li {
+        align-items: right;
+        margin: 2rem;
+      }
+
+      button {
+        padding: 0.5rem;
+        color: darkgreen;
+        background-color: #fff;
+        border-radius: 4px;
+        border: 1px darkgreen solid;
+        font-weight: 500;
+      }
+
+      button:hover {
+        background-color: darkgreen;
+        color: #fff;
+      }
+
+      ul button {
+        padding: 0.2rem;
+        color: darkgreen;
+        background-color: #fff;
+        border-radius: 4px;
+        border: 1px darkgreen solid;
+        margin-left: 4rem;
+        align-self: flex-end;        
+      }
+      </style>
+
+    <script>
+      let lista = [];
+      function adicionar(){
+      let campoNome =
+        document.getElementById("campo");
+      lista.push(campoNome.value);
+      let item = document.createElement("li");
+      for(let i = 0; i < lista.length; i++) {
+      item.id = "item" + i;
+      let botao = document.createElement("button");
+      botao.innerHTML = "X";
+      item.innerHTML = campoNome.value;
+      botao.onclick = function() {
+      remover(item.id);
+      }
+      item.append(botao);
+      let alunos 
+      = document.getElementById("lista");
+      alunos.append(item);
+      } // fim for
+      campoNome.value = "";
+      }
+      // Verificando a posição
+      function remover(id){
+      let elemento = document.getElementById(id);
+      let listaParent = document.getElementById("lista");
+      listaParent.removeChild(elemento);
+      let indice = lista.indexOf(id);
+      if(indice !== -1){
+        lista.splice(indice, 1);
+        }
+        console.log(lista);
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="input">
+      <input type="text" id="campo" placeholder="write down your item list..."/>
+      <button onclick="adicionar()"> Adicionar</button>
+      <ul id="lista"></ul>
+    </div>
+
+  </body>
+</html>
