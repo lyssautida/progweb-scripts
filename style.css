@@ -29,6 +29,11 @@ body {
   cursor: pointer;
 }
 
+.button::hover {
+  background-color: #000;
+  color: #fff;
+}
+
 #screen {
   color: lightseagreen;
   border: 2px solid lightseagreen;
@@ -42,6 +47,11 @@ body {
 #myScripts {
   color: lightskyblue;
   border: 2px solid lightskyblue;
+}
+
+#add-remove {
+  color: yellow;
+  border: 2px solid yellow;
 }
 
 a {
@@ -87,3 +97,5 @@ a {
   }
 }
 
+
+const nodeh1 = document.queryselect
